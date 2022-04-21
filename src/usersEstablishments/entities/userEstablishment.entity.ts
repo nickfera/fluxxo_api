@@ -2,7 +2,7 @@ import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateCol
 import { User } from 'src/users/entities/user.entity';
 import { Establishment } from 'src/establishments/entities/establishment.entity';
 
-@Entity()
+@Entity('users_establishments')
 export class UserEstablishment {
   @PrimaryGeneratedColumn({ name: 'id' })
   id: number;
@@ -13,10 +13,10 @@ export class UserEstablishment {
   @UpdateDateColumn({ name: 'updatedAt' })
   updatedAt: Date;
 
-  @ManyToOne(() => User, user => user.roles)
+  @ManyToOne(() => User, user => user.roles, { eager: true })
   user: User;
 
-  @ManyToOne(() => Establishment, establishment => establishment.users)
+  @ManyToOne(() => Establishment, establishment => establishment.users, { eager: true })
   establishment: Establishment;
 
   @Column({ name: 'role', width: 1 })

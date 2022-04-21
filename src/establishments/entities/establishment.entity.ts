@@ -1,8 +1,8 @@
+import { Entrance } from 'src/entrances/entities/entrance.entity';
 import { UserEstablishment } from 'src/usersEstablishments/entities/userEstablishment.entity';
-import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn, OneToMany, Unique } from 'typeorm';
+import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn, OneToMany } from 'typeorm';
 
-@Entity()
-@Unique(['registry'])
+@Entity('establishments')
 export class Establishment {
   @PrimaryGeneratedColumn({ name: 'id' })
   id: number;
@@ -27,4 +27,7 @@ export class Establishment {
 
   @OneToMany(() => UserEstablishment, users => users.establishment)
   users: UserEstablishment[];
+
+  @OneToMany(() => Entrance, entrances => entrances.establishment)
+  entrances: Promise<Entrance[]>;
 }

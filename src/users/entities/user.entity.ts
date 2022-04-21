@@ -1,8 +1,7 @@
 import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn, OneToMany, Unique } from 'typeorm';
 import { UserEstablishment } from 'src/usersEstablishments/entities/userEstablishment.entity';
 
-@Entity()
-@Unique(['email'])
+@Entity('users')
 export class User {
   @PrimaryGeneratedColumn({ name: 'id' })
   id: number;
@@ -13,7 +12,7 @@ export class User {
   @UpdateDateColumn({ name: 'updatedAt' })
   updatedAt: Date;
 
-  @Column({ name: 'email' })
+  @Column({ name: 'email', unique: true })
   email: string;
 
   @Column({ name: 'password' })
@@ -26,5 +25,5 @@ export class User {
   status: string;
 
   @OneToMany(() => UserEstablishment, role => role.user)
-  roles: UserEstablishment[];
+  roles: Promise<UserEstablishment[]>;
 }
