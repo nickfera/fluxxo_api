@@ -18,13 +18,16 @@ The basic features that either are or will be implemented:
 - Easier and more open configuration, like adding, removing, disabling entrances or other users
 
 Technologies used for the backend: Node.js, TypeScript, NestJS, TypeORM, Sockets.io
+
 Database: MySQL
+
 Frontend: TypeScript, React, MUI
+
 [Link to the frontend](https://github.com/nickfera/fluxxo_front)
 
 
-###### Portuguese
-## Introdução (Portuguese (Brazil))
+###### Português
+## Introdução
 Fluxxo é uma evolução de um projeto anterior "MoviMercado", que foi o meu primeiro project que foi utilizado numa situação real e não apenas entocado numa pasta aleatória na área de trabalho. A pendemia COVID-19 surgiu e com ela trouxe muitos problemas. Alguns deles foram as novas leis para (tentar) limitar e diminuir a quantidade de pessoas em espaços públicos assim diminuindo a espalha da pandemia. Acompanhar o movimento de pessoas em comércios pequenos é fácil ou desnecessário pois eram muitas vezes esquecidos mas estabelecimentos maiores não, principalmente para um mercado local que também é um ponto turístico da cidade.
 
 O síndico na época era um grande amigo meu e conversamos sobre o problema e a solução na época (mensagens em um grupo) que estava inefetivo. Assim a ideia surgiu e os meus aprendizados inciaram passos maiores. Era uma simples aplicação web desenvolvido usando Node.js, Express no servidor, MongoDB para o banco de dados, HTML e CSS para as páginas e Socket.io para o envio e recebimento de dados em tempo real que tudo junto resolvia o problema. Não era a solução mais perfeita nem a melhor mas era uma aplicação leve que foi hospedado gratuitamente no Heroku e funcionou. A fiscalização municipal recuou e agora o mercado podia relatar e monitorar a quantidade de pessoas que estavam entrando e saindo por cada entrada a qual quer hora e quantos tinham lá dentro naquele momento exato.
@@ -40,7 +43,9 @@ As funcionalidades básicas que estão presente ou ainda serão implementados:
 - Configuração mais fácil e ampla como adição, remoção, desativação de entradas ou outros usuários
 
 Tecnologias usado no backend: Node.js, TypeScript, NestJS, TypeORM, Sockets.io
+
 Banco de dados: MySQL
+
 Frontend: TypeScript, React, MUI
 
 [Link para o frontend](https://github.com/nickfera/fluxxo_front)
