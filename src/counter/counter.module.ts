@@ -6,6 +6,7 @@ import { JwtModule } from '@nestjs/jwt';
 import { JwtConstants } from 'src/common/constants';
 import { UsersModule } from 'src/users/users.module';
 import { EstablishmentsModule } from 'src/establishments/establishments.module';
+import { CacheManagerModule } from 'src/cacheManager/cacheManager.module';
 
 @Module({
   imports: [
@@ -16,6 +17,7 @@ import { EstablishmentsModule } from 'src/establishments/establishments.module';
     }),
     UsersModule,
     EstablishmentsModule,
+    CacheManagerModule,
   ],
   exports: [CounterGateway],
   controllers: [],
